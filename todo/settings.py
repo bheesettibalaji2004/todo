@@ -14,7 +14,7 @@ SECRET_KEY = "django-insecure-$lt4!t^@o84_56%b9l+r2-+r9b_m!&)eb#yng60*dsz$1uu=o9
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "todo-esir.onrender.com"
+    "balajibheesetti.pythonanywhere.com"
 ]
 
 
