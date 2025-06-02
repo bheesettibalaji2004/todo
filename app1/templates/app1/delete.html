@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title%}
+delete {{data}}
+{% endblock%}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="alert alert-danger" role="alert">
+    Do you want to delete {{data}} ?
+    </div>
+    <div class="d-grid gap-2 d-md-block mx-5 mt-3">
+        <button class="btn btn-primary " type="submit">Delete</button>
+        <a class="btn btn-danger" href="{% url 'home'%}">Cancel</a>
+    </div>
+    <!-- <p>do you want to delete <strong>{{data}}</strong> ?</p> <br> -->
+    <!-- <div class="buttons">
+        <button id="btn1" type="submit">delete</button>
+        <button type="submit"><a href="{% url 'home'%}">cancel</a></button>
+    </div> -->
+</form>
+{% endblock%}

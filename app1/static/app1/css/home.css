@@ -1,0 +1,105 @@
+.content{
+    border: 2px solid black;
+    width: 520px;
+    margin:auto;
+    box-shadow: 10px 20px 20px rgb(115, 115, 115);
+    margin-top: 2.5%;
+    border-radius: 8px;
+}
+form label{
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+input[type="text"] , textarea{
+    font-size: 18px;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(222, 222, 222);
+    box-sizing: border-box;
+    padding: 4px;
+    border-radius: 8px;
+}
+textarea{
+    height: 100px;
+}
+form button{
+    font-size: 15px;
+    border: none;
+    width: 40%;
+    margin: 5px 30% 10px 30%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 5px ;
+}
+form button:hover{
+    animation-name: hey;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+@keyframes hey{
+    0%{
+        background-color: rgb(255, 255, 255);
+    }
+    50%{
+        background-color: rgb(135, 135, 188);
+    }
+    100%{
+        background-color: rgb(85, 85, 176);
+    }
+}
+.group{
+    width: 520px;
+    margin:auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.group span{
+    width: 30%;
+    margin: 2% 10%;
+    cursor: default;
+}
+.group span a{
+    text-decoration: none;
+    color: rgba(255, 71, 71, 0.57);
+}
+p{
+    width: 100%;
+    border: 1px solid black;
+}
+a{
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width:600px){
+    .content{
+        width: 90%;
+        margin: 2% 5% 0 5%;
+    }
+    input[type="text"],textarea{
+        font-size: 16px;
+        padding: 6px;
+    }
+    form button{
+        width: 80%;
+        margin: 10px 10%;
+        font-size: 16px;
+    }
+    .group{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .group span{
+        width: 80%;
+        margin: 10px 0;
+        text-align: center;
+    }
+}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title%}
+Home page
+{% endblock%}
+
+{% block content %}
+<div class="container mx">
+    <h1 class="text-center mb-2">Todo List</h1>
+</div>
+    <div class="container mt-3">
+        <div class="row justify-content-center ">
+            <div class="col-md-6 col-lg-5">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <div class="d-flex justify-content-center mt-3">
+                        <button type="submit" class="w-25 btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% for a in data %}
+        <div class="container-fluid">
+        <div class="row justify-content-center mt-5 mx-sm-20">  
+        <div class="col-sm-6 mb-1">
+            <div class="card justify-content-center px-2 py-1">
+                    <h5 class="card-title"><i>Title:</i> {{a}} </h5>
+            </div>
+        </div>
+        <div class="col-sm-6 mb-1">
+            <div class="card justify-content-center px-2 py-1">
+                    <h5 class="card-title"><i>Content: </i>{{a.description|truncatechars:33}} </h5>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-0" >
+            <div class="col-sm-6 mb-3 ">
+                <div class="card w-75 mx-auto">
+                    <a class="btn btn-success border-0" href="{% url 'update' a.id %}">update</a>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+                <div class="card w-75 mx-auto">
+                    <a class="btn btn-danger border-0 " href="{% url 'delete' a.id %}">delete</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock%}

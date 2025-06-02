@@ -1,0 +1,73 @@
+form{
+    border: 2px solid black;
+    width: 520px;
+    margin:auto;
+    box-shadow: 10px 20px 20px rgb(115, 115, 115);
+    margin-top: 5%;
+    border-radius: 8px;
+}
+form label{
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+input[type="text"] , textarea{
+    font-size: 18px;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(222, 222, 222);
+    box-sizing: border-box;
+    padding: 4px;
+    border-radius: 8px;
+}
+textarea{
+    height: 100px;
+}
+form button{
+    text-transform: capitalize;
+    font-size: 15px;
+    border: none;
+    width: 40%;
+    margin: 5px 30% 10px 30%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 5px ;
+}
+form button:hover{
+    animation-name: hey;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+@keyframes hey{
+    0%{
+        background-color: rgb(255, 255, 255);
+    }
+    50%{
+        background-color: rgb(135, 135, 188);
+    }
+    100%{
+        background-color: rgb(85, 85, 176);
+    }
+}
+
+@media only screen and (max-width:600px){
+    form{
+        width: 90%;
+        margin: 2% 5% 0 5%;
+    }
+    input[type="text"],textarea{
+        font-size: 16px;
+        padding: 6px;
+    }
+    form button{
+        width: 80%;
+        margin: 10px 10%;
+        font-size: 16px;
+    }
+}
